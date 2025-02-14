@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr"> 
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application de communication</title>
+    <script src="https://unpkg.com/peerjs@1.5.2/dist/peerjs.min.js"></script> 
+    <script src="./index.js"></script> 
+
+    <link rel="stylesheet" href="style.css">
+</head> 
+
+<body> 
+    <div id="register"> 
+        <h1>Entrer Votre Nom:</h1> 
+        <form onsubmit="register(); return false;" accept-charset="UTF-8"> 
+            <input type="text" name="name" id="name" required> 
+            <input type="submit" value="Join!"> 
+        </form> 
+    </div> 
+
+    <div id="userAdd" style="display: none;"> 
+        <h1>Se Connecter à un autre utilisateur:</h1> 
+        <form onsubmit="appelUser(); return false;" accept-charset="UTF-8"> 
+            <input type="text" name="name" id="add" required> 
+            <input type="submit" value="Add"> 
+        </form> 
+    </div> 
+
+    <div id="userShare" style="display: none;"> 
+        <h1>Partager son écran:</h1> 
+        <form onsubmit="addScreenShare(); return false;" accept-charset="UTF-8"> 
+            <input type="text" name="name" id="share" required> 
+            <input type="submit" value="Share"> 
+        </form> 
+    </div> 
+
+    <div id="participants"></div> 
+</body> 
+</html>
